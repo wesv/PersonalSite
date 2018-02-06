@@ -1,0 +1,29 @@
+.home {
+	background-color: white !important; /*White*/
+	color: black;
+}
+
+.education {
+	background-color: rgb(108, 82, 148) !important;/*Purple*/
+	color: white;
+}
+
+.experience {
+	background-color: #7D212E !important; /* Red */
+	color: white;
+}
+		
+.projects {
+	background-color: rgb(41, 82, 37) !important; /*Green*/
+	color: white;
+}
+		
+.senior-design {
+	background-color: rgb(146, 90, 61) !important; /*Brown*/
+	color: white;
+}
+
+.about {
+	background-color: rgb(226, 119, 15) !important; /*Orange*/
+	color: white;
+}

@@ -1,0 +1,38 @@
+html {
+	height: 100%;
+}
+ 
+body {
+    overflow-x: hidden;
+	min-height:100%;
+	height: 100%;
+	margin: 0;
+}
+
+.card-thumbnail {
+	float:right;
+	vertical-align:top;
+	/*width:75px;*/
+}
+/*7D212E*/
+.card-title {
+	display:inline;
+}
+
+/* Custom Bootstrap Modifications */
+.container-fluid {
+	min-height:100%;
+}
+
+.btn-default {
+	min-width:100%;
+	max-width:100%;
+	text-align:left;
+	white-space:normal;
+	box-shadow: 7px 7px 5px #999999;
+	margin-bottom: 4vh;
+}
+
+dd {
+	margin-bottom:2vh;
+}

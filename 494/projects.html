@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Wes Vansteenburg - Projects</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Wesley Vansteenburg">
+	
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	
+	<!-- Custom CSS -->
+	<link href="css/card-mod.css" rel="stylesheet">
+	<link href="css/page-colors.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="jumbotron projects">
+			<h1 class="text-center">Projects</h1>
+		</div>
+		
+		<!-- Begin Facial Recognition Content -->
+		<div data-target=".facial-recognition-content" data-toggle="collapse" class="btn btn-default">
+			<!-- Title -->
+			<div class="card-title">
+				<h3>Facial Interpreter Software <small>September 2016</small>
+				<img class="card-thumbnail img-responsive collapse in facial-recognition-content" src="img/face-interpreter-icon.png"/>
+				</h3>
+			</div>
+			
+			<!-- Summary -->
+			<div>
+				<small>Two week Project to Recognize Multiple Faces per Image</small>
+			</div>
+			<div class="collapse in facial-recognition-content">
+				<div class="text-right text-muted">
+					<small>Click to expand &#x25BC;</small>
+				</div>
+			</div>
+			
+			<!-- Content Inside of Button -->
+			<div class="collapse facial-recognition-content">
+				<dl>
+					<dt>Application & Design</dt>
+					<dd>
+						<div class="row"> 
+							<div class="col-xs-8">
+							<p>The focus of this project was to have a quick development cycle. The deadline was 2 weeks, so as a group of 4 people, we looked into a multitude of APIs that would make our lives easier. In the design process, the group decided to discuss only how each module would be connected and what each module would do. Then, the modules were divided so that everyone could work at the same time. I worked on the front-end with a JavaFX UI that was expidited by the JavaFX SceneBuilder software.
+							The module I worked on was simply to create a UI for the users to upload an image, show what faces were in the image, and show metadata about the faces found. Each face had meta-data about the user that included name, sex, age, and last appearance in an image. To do this, I passed an image to the facial recognition logic written by another student which would return me information the UI required.
+							Below are links to view different aspects of the project.
+							</p>
+							<div class="row text-center">
+								<div class="col-xs-6"> <!--https://docs.google.com/document/d/1BDLFvC9ICHVzAXhqpJs--c3BekqIAdb7slrH_qBlNAU/edit?usp=sharing-->
+									<a href="pdf/Facial_Interpreter_Design_Proposal.pdf" target="_blank" class="btn btn-success text-center noPropagate">Design Document</a>
+								</div>
+								<div class="col-xs-6">
+									<a href="https://github.com/kyl1394/Facial-Interpreter" target="_blank" class="btn btn-success text-center noPropagate">GitHub Link</a>
+								</div>
+						</div>
+							</div>
+							<div class="col-xs-4 text-center">
+								<img src="img/FacialInterpreterUI.png" 
+									class="img-rounded img-responsive" 
+									style="margin-left: auto;"
+								/>
+								Picture of the UI
+							
+							</div>
+						</div>
+						
+					</dd>
+				
+					<dt>Skills/Tools Learned</dt>
+					<dd>
+						In this project, I learned how to use JavaFX to its fullest while also learning how to use a computer's camera to take pictures. It was also one of the first group projects that had such a short development cyle, so I taught myself to plan out my subsection quickly and thoroughly.
+					</dd>
+				</dl>
+				<div class="text-right text-muted">
+					<small>Click to collapse &#x25B2;</small>
+				</div>
+			</div>
+		</div>
+		<!-- End Facial Recognition Content -->
+		
+		<!-- Begin TopHat's Content -->
+		<div data-target=".tophat-content" data-toggle="collapse" class="btn btn-default test">
+			<!-- Title -->
+			<div class="card-title">
+				<h3>Top Hat Clone <small>November 2016</small>
+				<img class="card-thumbnail" src="img/questions-and-answers-main-screen.jpg"/>
+				</h3>
+			</div>
+			
+			<!-- Summary -->
+			<div>
+				<small>Question and Answer Software Designed for Classrooms</small>
+			</div>
+			
+			<div class="collapse in tophat-content">
+				<div class="text-right text-muted">
+					<small>Click to expand &#x25BC;</small>
+				</div>
+			</div>
+			
+			<!-- Content Inside of Button -->
+			<div class="collapse tophat-content test">
+				<dl class="test">
+					<dt>Application & Design</dt>
+					<dd class="test"><p class="test">
+					The goal of this project was to create a software like Top Hat. Top Hat is an online service that is starting to replace clickers at Iowa State University. These clickers allow students to respond to in-lecture questions quickly and easily. Top Hat does this, but online with any device. So, a teacher could ask a question to the class, and the class would input an answer to that question and the teacher could view the results.
+					As a group of 3 people, we had 3 weeks to make a Top Hat Clone. As there were only 3 of us, we opted for android and desktop support only. The desktop application would allow users to create a question, ask the question, and receive results. The android app would display the question and allow the user to answer. We needed a server to deal with the complexities of 
+					communication, so after some research we opted for a NodeJS server using Socket.IO for communication. For simplicity's sake, the applications were made in Java. We found a client-side library for Socket.IO and we went split the work into 3 sections: the desktop, the server, and the app.
+					My work was on the desktop app. Since I had 3 weeks, I spent the first week creating the <a class="open-close-content noPropagate" content="#tophat-module-diagram"> module diagram. </a>
+					</p>
+					<!--(TODO, show the module diagram)--> 
+					<div class="collapse open-close-content noPropagate text-center" content="#tophat-module-diagram" id="tophat-module-diagram">
+						<img src="img/Component Connector Diagram.png" class="img-responsive"/>
+						<a>Dismiss</a>
+					</div>
+					<p>
+					I started by implemeting a saving system which worked flawlessly using reflection to see the contents of the save data. Then, I made a facade layer to the Socket.IO library that converted my application data to JSON Strings and vice-versa. Finally, I created a File System class that abstracted both the Socket.IO facade and the saving system from the rest of the application.
+					Then, I got started on the UI. Having spent too much time on the first screen that would allow you to save and load data, there was not enough time to complete the other sections. Since time was of the essence, I made a quick mock-up of the other UIs screen, added basic functionality and got them working. In the end, I wasn't able to finish everything in the design diagram, but we got the project to work. Here's a video of it working: <a class="noPropagate" target="_blank" href="https://www.youtube.com/watch?v=b3EWTb_UrJs"> https://www.youtube.com/watch?v=b3EWTb_UrJs </a>.</dd>
+					</p>
+					<dt>Skills/Tools Learned</dt>
+					<dd>This project taught me a lot about how much time programming actually takes. In addition, I learned how much better I need to be in time-managment. Finally, I learned proper abstraction techniques.
+					</dd>
+				</dl>
+				
+				<div class="text-right text-muted">
+					<small>Click to collapse &#x25B2;</small>
+				</div>
+			</div>
+		</div>
+		<!-- End Top Hat's Content -->
+		
+		<!-- Begin RPS's Content -->
+		<div data-target=".rps-content" data-toggle="collapse" class="btn btn-default">
+			<!-- Title -->
+			<div class="card-title">
+				<h3>Rat Pack Studios <small>January 2015-May 2015</small>
+				<img class="card-thumbnail" src="img/RPS.png"/>
+				</h3>
+			</div>
+			
+			<!-- Summary -->
+			<div>
+				<small>Easy Web Game Development Software</small>
+			</div>
+			
+			<div class="collapse in rps-content">
+				<div class="text-right text-muted">
+					<small>Click to expand &#x25BC;</small>
+				</div>
+			</div>
+			
+			<!-- Content Inside of Button -->
+			<div class="collapse rps-content">
+				<dl>
+					<dt>Application & Design</dt>
+					<dd>
+					<p>I was tasked with creating the <a class="noPropagate" target="_blank" href="http://rpstudios.kaylerrenslow.com/">Website</a> on which these games would be uploaded and played. There were 3 webpages to make: the sign-in page, the game-select/upload page, and the game-playing page.
+					The sign-in page dealt with OAuth2 sign-in support to allow users to sign-in with their Google accounts. 
+					The game-select/upload page had support for uploading games, and then either starting a game or joining a game already in process. To upload a game, a key would be created that gave the Development Application permission to upload. After the game was uploaded, the user could then launch the game they had just created. 
+					The game-playing page contained a chat system and controls for leaving a game, and kicking other users out of the game. This page was the most difficult to create due to the restriction of not having client to client communication. This problem was solved with the heartbeat system.
+					<a class="open-close-content noPropagate" content="#rps-youtube-video">You can view a video of the project here, or you can view the video at the Website linked above.</a>
+					</p>
+					<div class="open-close-content noPropagate text-center collapse" id="rps-youtube-video" content="#rps-youtube-video">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/dJL0fFpEXeo" frameborder="0" allowfullscreen></iframe>
+						<p><a>Dismiss</a></p>
+					</div>
+				
+					<p>
+					The heartbeat system worked like this: at every time interval, a request would be made to the server to write to a shared file on the server. Any data that needed to be sent to another client and data stating the client had visited the file was saved. In addition, any new data in the file would be accessed and returned from the server request. If client x noticed that it had already visited the file before, it would look to see if every other client in the room had visited. If any client didn't visit, they would be marked as missing. If a missing client visits, they remove the "missing" mark. Any missing client who didn't visit was kicked from the room. Then, client x would mark every client as "not visited" and this process repeats like a heartbeat.
+					</p>
+					</dd>
+				
+					<dt>Skills Learned</dt>
+					<dd><p>This project taught me a lot about the web development process. Also, I learned how restrictions placed at the begininng of projects can lead to inventive solutions.</dd>
+				</dl>
+				
+				<div class="text-right text-muted">
+					<small>Click to collapse &#x25B2;</small>
+				</div>
+			</div>
+		</div>
+		<!-- End Nim's Content -->
+		
+	</div>
+	
+	<!-- jQuery -->
+	<script src="js/jquery.js"></script>
+    
+	<!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>	
+
+	<script>
+		$(document).ready(function() {
+			//Any tag with this class will not propagate it's click to it's parent, 
+			//thus preventing the cards from collapsing when pressing a button within the cards.
+			$(".noPropagate").click(function(e) {
+				e.stopPropagation();
+			}).mouseup(function(){
+				$(this).blur();
+			});
+		
+			
+			$(".open-close-content").click(function(e){
+				var img = $($(this).attr("content"));
+				
+				if(img.css("display") === "none")
+					img.show(500);
+				else
+					img.hide(500);
+			}); 
+		});
+	</script>
+</body>
+</html>
